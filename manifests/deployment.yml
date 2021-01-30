@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shapzocpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shapzocpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: shapzocpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shapzocpipelinesjavascriptdocker 
+          image: shapzocontainterregistry.azurecr.io/shapzocpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
